@@ -1,0 +1,16 @@
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/CommaToDotConverter.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/CoordinateHandlerBean.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/RCoordinateBean.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/ResultsControllerBean.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/XCoordinateBean.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/YCoordinateBean.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/db/DAOFactory.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/db/JPAUtils.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/db/ResultDAO.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/db/ResultDAOImpl.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/entity/ResultEntity.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/mbeans/MissPercentage.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/mbeans/MissPercentageMBean.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/mbeans/PointsCounter.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/mbeans/PointsCounterMBean.java
+/Users/igorcimirev/Desktop/WebLab3-main/src/main/java/com/arekalov/jsfgraph/utils/AreaChecker.java

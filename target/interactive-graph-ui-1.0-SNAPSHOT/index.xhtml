@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE html
+                PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Web Lab 3 - Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="styles" name="main.css"/>
+    <h:outputStylesheet library="styles" name="tw.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</h:head>
+<h:body>
+
+    <!-- Modern Hero Section -->
+    <h:panelGroup layout="block" styleClass="hero-section">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-32 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+            <div class="absolute -bottom-40 -left-32 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute top-40 left-1/2 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 4s;"></div>
+        </div>
+
+        <div class="container-modern text-center relative z-10">
+            <!-- Main logo/icon -->
+            <div class="flex justify-center mb-8">
+                <div class="w-32 h-32 bg-white/20 rounded-3xl flex items-center justify-center shadow-2xl backdrop-blur-sm border border-white/30 float-animation">
+                    <i class="fas fa-function text-white text-5xl"></i>
+                </div>
+            </div>
+
+            <!-- Main heading -->
+            <h1 class="text-display text-white font-black mb-6 text-shadow">
+                Web Lab
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300">Three</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="text-body text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Advanced coordinate analysis system with real-time visualization.
+                Explore mathematical functions through interactive graphs and precise calculations.
+            </p>
+
+            <!-- Student info -->
+            <div class="glass-card inline-block px-8 py-6 mb-12">
+                <div class="text-white text-lg font-semibold">
+                    <span class="text-yellow-300">Rekalov Artem</span> • P3209 • 252525
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="flex justify-center">
+                <h:link value="Launch Application" styleClass="btn-primary text-lg px-16 py-6 text-xl" outcome="goToMain">
+                    <i class="fas fa-rocket mr-4"></i>
+                    Get Started
+                </h:link>
+            </div>
+
+            <!-- Features grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+                <div class="glass-card p-6 text-white text-center">
+                    <i class="fas fa-chart-line text-3xl text-yellow-300 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Real-time Graph</h3>
+                    <p class="text-white/80">Interactive coordinate plotting with instant visual feedback</p>
+                </div>
+
+                <div class="glass-card p-6 text-white text-center">
+                    <i class="fas fa-calculator text-3xl text-green-300 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Precise Calculations</h3>
+                    <p class="text-white/80">Accurate mathematical computations with validation</p>
+                </div>
+
+                <div class="glass-card p-6 text-white text-center">
+                    <i class="fas fa-database text-3xl text-blue-300 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">History Tracking</h3>
+                    <p class="text-white/80">Comprehensive results history with visual indicators</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <p class="text-white/60 text-sm font-medium">
+                Built with modern web technologies
+            </p>
+        </div>
+    </h:panelGroup>
+
+    <script type="module" src="./resources/js/index.js"></script>
+
+</h:body>
+</html>

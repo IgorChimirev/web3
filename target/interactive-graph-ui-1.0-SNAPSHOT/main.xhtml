@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE html
+                PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Web Lab 3 - Modern Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="styles" name="main.css"/>
+    <h:outputStylesheet library="styles" name="tw.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</h:head>
+<h:body>
+
+    <!-- Modern Main Container -->
+    <h:panelGroup layout="block" styleClass="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-purple-900 transition-all duration-500">
+
+        <!-- Enhanced Header -->
+        <h:panelGroup layout="block" styleClass="nav-modern mt-6 mx-6">
+            <div class="container-modern">
+                <div class="flex items-center justify-between">
+                    <!-- Logo/Brand -->
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-rocket text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-black text-gradient">Web Lab 3</h1>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Rekalov Artem | P3209 | 252525</p>
+                        </div>
+                    </div>
+
+                    <!-- Time Display -->
+                    <div class="flex items-center gap-6">
+                        <div class="hidden sm:flex flex-col items-end">
+                            <h:panelGroup layout="block" id="date-time" styleClass="text-slate-700 dark:text-slate-300">
+                                <h:outputText id="date" value="" escape="false" styleClass="font-semibold"/>
+                                <span class="mx-2">•</span>
+                                <h:outputText id="time" value="" escape="false" styleClass="font-mono font-bold text-indigo-600 dark:text-indigo-400"/>
+                            </h:panelGroup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:panelGroup>
+
+        <!-- Mobile Time Display -->
+        <h:panelGroup layout="block" styleClass="sm:hidden mt-4 mx-6">
+            <div class="glass-card text-center py-3">
+                <h:panelGroup layout="block" id="date-time-mobile" styleClass="text-slate-700 dark:text-slate-300 font-medium">
+                    <h:outputText id="date-mobile" value="" escape="false"/>
+                    <span class="mx-2">•</span>
+                    <h:outputText id="time-mobile" value="" escape="false" styleClass="font-mono text-indigo-600 dark:text-indigo-400"/>
+                </h:panelGroup>
+            </div>
+        </h:panelGroup>
+
+        <!-- Main Content Grid -->
+        <div class="container-modern section-spacing">
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
+
+                <!-- Graph Section -->
+                <div class="xl:col-span-2">
+                    <div class="glass-card p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-heading text-gradient">Interactive Graph</h2>
+                            <div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                                <i class="fas fa-mouse-pointer"></i>
+                                <span class="text-sm font-medium">Click on graph to plot points</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <canvas id="graphCanvas" width="650" height="650" class="graph-container glow-effect"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Form Section -->
+                <div class="xl:col-span-1">
+                    <div class="modern-card p-8 glow-effect">
+                        <h2 class="text-heading text-gradient mb-8 text-center">Point Coordinates</h2>
+
+                        <h:form id="input-form" styleClass="space-y-6">
+
+                            <!-- X Coordinate -->
+                            <div class="form-group">
+                                <label class="text-lg font-semibold text-slate-700 dark:text-slate-300 text-center block">
+                                    X Coordinate: {-3, 5}
+                                </label>
+                                <h:selectOneRadio id="xSelectRadio" value="#{xCoordinateBean.x}"
+                                                  layout="pageDirection" styleClass="flex flex-wrap justify-center gap-3 mt-4">
+                                    <f:selectItem itemValue="-3" itemLabel="-3"/>
+                                    <f:selectItem itemValue="-2" itemLabel="-2"/>
+                                    <f:selectItem itemValue="-1" itemLabel="-1"/>
+                                    <f:selectItem itemValue="0" itemLabel="0"/>
+                                    <f:selectItem itemValue="1" itemLabel="1"/>
+                                    <f:selectItem itemValue="2" itemLabel="2"/>
+                                    <f:selectItem itemValue="3" itemLabel="3"/>
+                                    <f:selectItem itemValue="4" itemLabel="4"/>
+                                    <f:selectItem itemValue="5" itemLabel="5"/>
+                                    <f:validateDoubleRange minimum="-3" maximum="5"/>
+                                </h:selectOneRadio>
+                                <h:message for="xSelectRadio" styleClass="text-rose-500 dark:text-rose-400 mt-2 text-sm font-medium"/>
+                            </div>
+
+                            <!-- Y Coordinate -->
+                            <div class="form-group">
+                                <label for="yValue" class="text-lg font-semibold text-slate-700 dark:text-slate-300 text-center block">
+                                    Y Coordinate: (-3, 5)
+                                </label>
+                                <h:inputText id="yValue" value="#{yCoordinateBean.y}" maxlength="8"
+                                             styleClass="input-modern text-center font-mono text-lg"
+                                             converter="com.arekalov.CommaToDotConverter">
+                                    <f:validateDoubleRange minimum="-3" maximum="5"/>
+                                </h:inputText>
+                                <h:message for="yValue" styleClass="text-rose-500 dark:text-rose-400 mt-2 text-sm font-medium"/>
+                            </div>
+
+                            <!-- R Slider -->
+                            <div class="form-group">
+                                <label class="text-lg font-semibold text-slate-700 dark:text-slate-300 text-center block">
+                                    Radius: #{rCoordinateBean.r}
+                                </label>
+                                <div class="mt-4 px-4">
+                                    <p:slider id="rSlider" minValue="1" maxValue="4" step="0.25"
+                                              for="rValue" styleClass="w-full"
+                                              onSlideEnd="updateCanvas(event, ui)"/>
+                                </div>
+                                <h:inputText id="rValue" value="#{rCoordinateBean.r}" maxlength="7" styleClass="hidden">
+                                    <f:validateDoubleRange minimum="1" maximum="4"/>
+                                </h:inputText>
+                                <h:message for="rValue" styleClass="text-rose-500 dark:text-rose-400 mt-2 text-sm font-medium"/>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <h:commandButton value="Check Point" styleClass="btn-primary w-full text-lg py-5 mt-4">
+                                <f:ajax execute="@form"
+                                        listener="#{resultsControllerBean.addResult(xCoordinateBean.x, yCoordinateBean.y, rCoordinateBean.r)}"
+                                        render="@form results-table"/>
+                            </h:commandButton>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Table Section -->
+            <div class="mt-16">
+                <div class="glass-card p-8">
+                    <div class="flex items-center justify-between mb-8">
+                        <h2 class="text-heading text-gradient">Results History</h2>
+                        <div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <i class="fas fa-history"></i>
+                            <span class="text-sm font-medium">Real-time updates</span>
+                        </div>
+                    </div>
+
+                    <div class="max-h-96 overflow-y-auto rounded-2xl">
+                        <h:dataTable styleClass="table-modern" id="results-table" var="result"
+                                     value="#{resultsControllerBean.results}">
+                            <h:column styleClass="rounded-l-2xl">
+                                <f:facet name="header">
+                                    <h:outputText value="X" styleClass="text-white"/>
+                                </f:facet>
+                                <h:outputText value="#{result.x}" styleClass="font-mono font-bold text-slate-800 dark:text-slate-200"/>
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Y" styleClass="text-white"/>
+                                </f:facet>
+                                <h:outputText value="#{result.y}" styleClass="font-mono font-bold text-slate-800 dark:text-slate-200"/>
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="R" styleClass="text-white"/>
+                                </f:facet>
+                                <h:outputText value="#{result.r}" styleClass="font-mono font-bold text-slate-800 dark:text-slate-200"/>
+                            </h:column>
+
+                            <h:column styleClass="rounded-r-2xl">
+                                <f:facet name="header">
+                                    <h:outputText value="Result" styleClass="text-white"/>
+                                </f:facet>
+                                <h:panelGroup layout="block" rendered="#{result.result}">
+                                    <span class="status-hit">
+                                        <i class="fas fa-check text-xs"></i>
+                                    </span>
+                                </h:panelGroup>
+                                <h:panelGroup layout="block" rendered="#{not result.result}">
+                                    <span class="status-miss">
+                                        <i class="fas fa-times text-xs"></i>
+                                    </span>
+                                </h:panelGroup>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Navigation -->
+        <div class="container-modern py-12">
+            <div class="text-center">
+                <h:link value="Back to Start Page" styleClass="btn-secondary px-12 py-4 text-lg" outcome="goToIndex">
+                    <i class="fas fa-home mr-3"></i>
+                </h:link>
+            </div>
+        </div>
+    </h:panelGroup>
+
+    <!-- Hidden forms for functionality -->
+    <h:form id="graph-form">
+        <h:inputHidden id="xGraphValue" value="#{coordinateHandlerBean.x}"/>
+        <h:inputHidden id="yGraphValue" value="#{coordinateHandlerBean.y}"/>
+        <h:commandButton id="handleClick" styleClass="hidden">
+            <f:ajax execute="@form"
+                    listener="#{resultsControllerBean.addResult(coordinateHandlerBean.x, coordinateHandlerBean.y, rCoordinateBean.r)}"
+                    render="@form xGraphValue yGraphValue results-table"/>
+        </h:commandButton>
+    </h:form>
+
+    <h:form id="clear-points">
+        <h:commandButton id="clearPoints" styleClass="hidden">
+            <f:ajax execute="@form"
+                    listener="#{resultsControllerBean.clearResults()}"
+                    render="input-form results-table"/>
+        </h:commandButton>
+    </h:form>
+
+    <h:form id="update-radius">
+        <h:inputHidden id="radius" value="#{rCoordinateBean.r}"/>
+        <h:commandButton id="updateCanvas" styleClass="hidden">
+            <f:ajax execute="@form"
+                    listener="#{resultsControllerBean.updateCanvas(rCoordinateBean.r)}"
+                    render="@form results-table"/>
+        </h:commandButton>
+    </h:form>
+
+    <script type="module" src="./resources/js/canvas-setup.js"></script>
+    <script type="module" src="./resources/js/main.js"></script>
+
+</h:body>
+</html>

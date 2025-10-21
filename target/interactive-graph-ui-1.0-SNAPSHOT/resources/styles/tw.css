@@ -1,0 +1,235 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    /* Современная цветовая схема с градиентами */
+    :root {
+        --primary: #6366f1;
+        --primary-hover: #4f46e5;
+        --secondary: #f8fafc;
+        --accent: #06d6a0;
+        --dark: #0f172a;
+        --light: #ffffff;
+        --gray-light: #f1f5f9;
+        --gray-medium: #64748b;
+    }
+
+    body {
+        @apply bg-slate-50 dark:bg-slate-900 transition-colors duration-300;
+    }
+}
+
+@layer components {
+    /* Modern gradients */
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .bg-gradient-dark {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+
+    .bg-gradient-accent {
+        background: linear-gradient(135deg, #06d6a0 0%, #118ab2 100%);
+    }
+
+    /* Glass morphism effects */
+    .glass-effect {
+        @apply backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl;
+    }
+
+    .glass-card {
+        @apply glass-effect rounded-2xl p-6 hover:shadow-xl transition-all duration-300;
+    }
+
+    /* Modern cards */
+    .modern-card {
+        @apply glass-card bg-white/80 dark:bg-slate-800/80;
+    }
+
+    /* Enhanced buttons */
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold transition-all duration-300;
+        @apply bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700;
+        @apply text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+        @apply focus:outline-none focus:ring-4 focus:ring-indigo-500/50 focus:ring-offset-2;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-8 py-4 rounded-2xl font-semibold transition-all duration-300;
+        @apply bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300/50;
+        @apply dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-slate-200 dark:border-slate-600/50;
+        @apply shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+    }
+
+    /* Enhanced form elements */
+    .input-modern {
+        @apply w-full px-6 py-4 rounded-2xl border-2 border-slate-300/50 bg-white/80 text-slate-800;
+        @apply focus:outline-none focus:ring-4 focus:ring-indigo-500/50 focus:border-indigo-500;
+        @apply transition-all duration-300 shadow-sm backdrop-blur-sm;
+        @apply dark:bg-slate-800/80 dark:border-slate-600/50 dark:text-slate-200 dark:focus:ring-indigo-400/50;
+    }
+
+    .form-group {
+        @apply flex flex-col gap-3;
+    }
+
+    /* Table enhancements */
+    .table-modern {
+        @apply w-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm;
+        background: rgba(255, 255, 255, 0.9);
+        @apply dark:bg-slate-800/90;
+    }
+
+    .table-modern th {
+        @apply bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold py-6 px-6 text-lg;
+    }
+
+    .table-modern td {
+        @apply px-6 py-4 text-center font-medium text-slate-700 dark:text-slate-300 border-b border-slate-200/50 dark:border-slate-700/50;
+        background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.03));
+    }
+
+    /* Status indicators */
+    .status-hit {
+        @apply inline-flex items-center justify-center w-8 h-8 rounded-full;
+        @apply bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold;
+        @apply border border-emerald-500/30;
+    }
+
+    .status-miss {
+        @apply inline-flex items-center justify-center w-8 h-8 rounded-full;
+        @apply bg-rose-500/20 text-rose-600 dark:text-rose-400 font-bold;
+        @apply border border-rose-500/30;
+    }
+
+    /* Graph container */
+    .graph-container {
+        @apply w-full h-auto rounded-3xl shadow-2xl bg-white/80 dark:bg-slate-800/80;
+        @apply border-2 border-white/50 dark:border-slate-700/50 backdrop-blur-sm;
+    }
+
+    /* Section spacing */
+    .section-spacing {
+        @apply py-20 px-6;
+    }
+
+    /* Navigation */
+    .nav-modern {
+        @apply glass-effect rounded-2xl px-8 py-4 mb-8;
+    }
+
+    /* Hero section */
+    .hero-section {
+        @apply min-h-screen flex items-center justify-center relative overflow-hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    /* Floating animation */
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    .float-animation {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    /* Modern scrollbars */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-slate-100 dark:bg-slate-800 rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gradient-to-b from-indigo-500 to-purple-600 rounded-full hover:from-indigo-600 hover:to-purple-700;
+    }
+
+    /* Glow effects */
+    .glow-effect {
+        @apply transition-all duration-500;
+    }
+
+    .glow-effect:hover {
+        box-shadow:
+                0 0 30px rgba(99, 102, 241, 0.4),
+                0 0 60px rgba(99, 102, 241, 0.2),
+                0 0 90px rgba(99, 102, 241, 0.1);
+        transform: translateY(-5px) scale(1.02);
+    }
+}
+
+@layer utilities {
+    /* Text utilities */
+    .text-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive typography */
+    .text-display {
+        @apply text-5xl md:text-6xl lg:text-7xl font-black tracking-tight;
+    }
+
+    .text-heading {
+        @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    }
+
+    .text-subheading {
+        @apply text-xl md:text-2xl lg:text-3xl font-semibold;
+    }
+
+    .text-body {
+        @apply text-lg md:text-xl leading-relaxed;
+    }
+
+    /* Layout utilities */
+    .container-modern {
+        @apply max-w-7xl mx-auto px-6;
+    }
+
+    /* Grid layouts */
+    .grid-modern {
+        @apply grid gap-8;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-modern {
+        @apply px-4;
+    }
+
+    .text-display {
+        @apply text-4xl;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        @apply px-6 py-3 text-base;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    .glass-effect {
+        @apply bg-slate-900/30 border-slate-600/30;
+    }
+}
