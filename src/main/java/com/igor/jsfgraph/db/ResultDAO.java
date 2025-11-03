@@ -1,4 +1,4 @@
-package com.arekalov.jsfgraph.db;
+package com.igor.jsfgraph.db;
 
 import com.arekalov.jsfgraph.entity.ResultEntity;
 
