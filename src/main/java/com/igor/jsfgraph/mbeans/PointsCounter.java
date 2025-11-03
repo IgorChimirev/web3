@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Collection;
 
 import com.igor.jsfgraph.db.ResultDAO;
-import com.arekalov.jsfgraph.entity.ResultEntity;
+import com.igor.jsfgraph.entity.ResultEntity;
 
 public class PointsCounter extends NotificationBroadcasterSupport implements PointsCounterMBean {
     private AtomicInteger totalPoints = new AtomicInteger(0);
