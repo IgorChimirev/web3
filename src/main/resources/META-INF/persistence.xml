@@ -5,7 +5,7 @@
              version="3.0">
 
     <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
-        <class>com.arekalov.jsfgraph.entity.ResultEntity</class>
+        <class>com.igor.jsfgraph.entity.ResultEntity</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
         </properties>
