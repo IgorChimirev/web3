@@ -1,4 +1,4 @@
-package com.arekalov.jsfgraph;
+package com.igor.jsfgraph;
 
 import com.arekalov.jsfgraph.db.DAOFactory;
 import com.arekalov.jsfgraph.entity.ResultEntity;
