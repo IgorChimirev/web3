@@ -5,7 +5,7 @@ import javax.management.NotificationBroadcasterSupport;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Collection;
 
-import com.arekalov.jsfgraph.db.ResultDAO;
+import com.igor.jsfgraph.db.ResultDAO;
 import com.arekalov.jsfgraph.entity.ResultEntity;
 
 public class PointsCounter extends NotificationBroadcasterSupport implements PointsCounterMBean {
