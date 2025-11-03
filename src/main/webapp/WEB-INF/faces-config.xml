@@ -6,25 +6,25 @@
 
     <managed-bean>
         <managed-bean-name>xCoordinateBean</managed-bean-name>
-        <managed-bean-class>com.arekalov.jsfgraph.XCoordinateBean</managed-bean-class>
+        <managed-bean-class>com.igor.jsfgraph.XCoordinateBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
     <managed-bean>
         <managed-bean-name>yCoordinateBean</managed-bean-name>
-        <managed-bean-class>com.arekalov.jsfgraph.YCoordinateBean</managed-bean-class>
+        <managed-bean-class>com.igor.jsfgraph.YCoordinateBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
     <managed-bean>
         <managed-bean-name>rCoordinateBean</managed-bean-name>
-        <managed-bean-class>com.arekalov.jsfgraph.RCoordinateBean</managed-bean-class>
+        <managed-bean-class>com.igor.jsfgraph.RCoordinateBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
     <managed-bean>
         <managed-bean-name>resultsControllerBean</managed-bean-name>
-        <managed-bean-class>com.arekalov.jsfgraph.ResultsControllerBean</managed-bean-class>
+        <managed-bean-class>com.igor.jsfgraph.ResultsControllerBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
         <managed-property>
             <property-name>XCoordinateBean</property-name>
@@ -42,7 +42,7 @@
 
     <managed-bean>
         <managed-bean-name>coordinateHandlerBean</managed-bean-name>
-        <managed-bean-class>com.arekalov.jsfgraph.CoordinateHandlerBean</managed-bean-class>
+        <managed-bean-class>com.igor.jsfgraph.CoordinateHandlerBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
 
