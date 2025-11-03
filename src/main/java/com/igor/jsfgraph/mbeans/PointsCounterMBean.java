@@ -1,4 +1,4 @@
-package com.arekalov.jsfgraph.mbeans;
+package com.igor.jsfgraph.mbeans;
 
 public interface PointsCounterMBean {
     int getTotalPoints();
