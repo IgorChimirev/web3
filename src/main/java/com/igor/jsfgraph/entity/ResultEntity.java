@@ -1,4 +1,4 @@
-package com.arekalov.jsfgraph.entity;
+package com.igor.jsfgraph.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
