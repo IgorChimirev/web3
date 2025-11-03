@@ -1,9 +1,9 @@
 package com.igor.jsfgraph;
 
-import com.arekalov.jsfgraph.db.DAOFactory;
-import com.arekalov.jsfgraph.entity.ResultEntity;
-import com.arekalov.jsfgraph.mbeans.*;
-import com.arekalov.jsfgraph.utils.AreaChecker;
+import com.igor.jsfgraph.db.DAOFactory;
+import com.igor.jsfgraph.entity.ResultEntity;
+import com.igor.jsfgraph.mbeans.*;
+import com.igor.jsfgraph.utils.AreaChecker;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
