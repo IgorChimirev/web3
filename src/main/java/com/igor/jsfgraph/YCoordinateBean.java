@@ -1,4 +1,4 @@
-package com.arekalov.jsfgraph;
+package com.igor.jsfgraph;
 
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.validator.ValidatorException;
