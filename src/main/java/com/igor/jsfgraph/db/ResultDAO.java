@@ -1,6 +1,6 @@
 package com.igor.jsfgraph.db;
 
-import com.arekalov.jsfgraph.entity.ResultEntity;
+import com.igor.jsfgraph.entity.ResultEntity;
 
 import java.util.Collection;
 
