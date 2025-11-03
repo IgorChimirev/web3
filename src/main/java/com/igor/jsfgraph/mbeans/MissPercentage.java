@@ -1,4 +1,4 @@
-package com.arekalov.jsfgraph.mbeans;
+package com.igor.jsfgraph.mbeans;
 
 public class MissPercentage implements MissPercentageMBean {
     private PointsCounterMBean pointsCounter;
