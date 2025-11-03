@@ -1,4 +1,4 @@
-package com.arekalov.jsfgraph.db;
+package com.igor.jsfgraph.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
